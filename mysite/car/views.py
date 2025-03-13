@@ -1,12 +1,13 @@
 from drf_yasg.openapi import Response
 from rest_framework import viewsets, generics,  status
 from rest_framework_simplejwt.views import TokenObtainPairView
-
 from .models import *
 from django_filters.rest_framework import DjangoFilterBackend
 from rest_framework.filters import SearchFilter,OrderingFilter
 from .filters import CarFilter
 from .serializers import *
+from rest_framework.response import Response
+
 class RegisterView(generics.CreateAPIView):
     serializer_class = UserSerializer
 
